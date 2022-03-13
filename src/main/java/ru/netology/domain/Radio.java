@@ -51,20 +51,20 @@ public class Radio {
     }
 
     public void nextChanel() {
-        if (currentChanel < 9) {
-            currentChanel = currentChanel + 1;
-        }
         if (currentChanel >= 9) {
-            this.currentChanel = 0;
+            setCurrentChanel(0);
+        }
+        else {
+            setCurrentChanel(currentChanel + 1);
         }
     }
 
     public void prevChanel() {
-        if (currentChanel > 0) {
-            currentChanel = currentChanel - 1;
-        }
         if (currentChanel <= 0) {
-            this.currentChanel = 9;
+            setCurrentChanel(9);
+        }
+        else {
+            setCurrentChanel(currentChanel - 1);
         }
     }
 
