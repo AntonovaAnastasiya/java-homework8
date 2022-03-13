@@ -230,6 +230,18 @@ public class RadioTest {
     }
 
     @Test
+    public void nextChanel4() {
+        Radio radio = new Radio();
+        radio.setCurrentChanel(8);
+        radio.nextChanel();
+
+        int expected = 9;
+        int actual = radio.getCurrentChanel();
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
     public void prevChanel() {
         Radio radio = new Radio();
         radio.setCurrentChanel(4);
@@ -249,6 +261,18 @@ public class RadioTest {
         radio.prevChanel();
 
         int expected = 9;
+        int actual = radio.getCurrentChanel();
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void prevChanel3() {
+        Radio radio = new Radio();
+        radio.setCurrentChanel(1);
+        radio.prevChanel();
+
+        int expected = 0;
         int actual = radio.getCurrentChanel();
 
         assertEquals(expected, actual);
